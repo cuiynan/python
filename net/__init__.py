@@ -1,4 +1,4 @@
-from net.MyClass import ExcelUtils, Area
+from repteilarea.MyClass import ExcelUtils, Area
 
 area = Area()
 allArea = []

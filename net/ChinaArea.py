@@ -8,7 +8,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-from net.MyClass import Area, ExcelUtils
+from repteilarea.MyClass import Area, ExcelUtils
 
 
 def addOther(allArea):

@@ -1,8 +1,9 @@
+# 与 ChinaArea.py 配对使用
 import os
 
 import xlwt
 
-
+# 定义的区域对象
 class Area:
     code = ""
     name = ""
@@ -14,6 +15,7 @@ class Area:
         print(self.code + "    " + self.name + "    " + self.parentCode + "    " + self.parentName + "    " + self.type)
 
 
+# 操作EXCEL类
 class ExcelUtils:
     def writeExcel(self, fileName, AreaList):
         workbook = xlwt.Workbook()
