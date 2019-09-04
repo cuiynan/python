@@ -39,7 +39,7 @@ def addOther(allArea):
     area = Area()
     area.parentCode = "710100"
     area.parentName = "台湾省"
-    area.type = "市"
+    area.type = "区"
     area.code = "710101"
     area.name = "台湾省"
     allArea.append(area)
@@ -62,8 +62,8 @@ try:
         area = Area()
         td = tr.findAll("td")
         spans = td[2].findAll("span")
-        txt1 = td[1].text
-        txt2 = td[2].text
+        txt1 = td[1].text.strip()
+        txt2 = td[2].text.strip()
         if (len(txt1) == 0):
             continue
         tdClass = td[1].attrs['class'][0]
@@ -83,10 +83,11 @@ try:
                 # 说明是县或区
                 area.parentCode = cityCode
                 area.parentName = cityName
-                if (txt2.find("区") == -1):
-                    area.type = "县"
-                else:
-                    area.type = "区"
+                # if (txt2.find("区") == -1):
+                #     area.type = "县"
+                # else:
+                #     area.type = "区"
+                area.type = "区"
                 area.code = txt1
                 area.name = txt2
         else:
@@ -110,6 +111,8 @@ try:
                 provinceCode = int(txt1)
                 provinceName = txt2
                 # 直辖市
+                if(provinceName.find("自治区") > -1):
+                    continue;
                 area = Area()
                 area.parentCode = provinceCode
                 area.parentName = provinceName
