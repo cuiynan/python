@@ -3,6 +3,8 @@
 # 来源:
 # version: 2019年7月中华人民共和国县以上行政区划代码
 # url: http://www.mca.gov.cn/article/sj/xzqh/2019/
+# 输出：
+#       区域.xls
 
 # 2019年8月27日
 import requests
