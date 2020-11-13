@@ -13,4 +13,5 @@ class Area:
     type = "省"
 
     def printing(self):
-        print(self.code + "    " + self.name + "    " + self.parentCode + "    " + self.parentName + "    " + self.type)
+        print(self.code + "		" + self.name + "    " + self.parentCode + "    " + self.parentName + "    " + self.type)
+

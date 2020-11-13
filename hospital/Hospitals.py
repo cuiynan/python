@@ -5,14 +5,15 @@ class Hospital:
     privince = ""
     city = ""
     address = ""
+    area = ""
     type = ""
     kind = ""
     level = ""
     onlyCode = ""
 
-    def print(self):
+    def printings(self, num):
         print(
-            self.code + "    " + self.name + "    " + self.oldName + "    " + self.privince + "    " +
-            self.city + self.address + "    " + self.type + "    " + self.kind + "    " + self.level + "    " + self.onlyCode)
-
-
+            "0" +
+            "	" + self.code + "	" + self.name + "	" + self.address + "	" + self.privince + "	" +
+            self.city + "	" + self.area + "	" + self.oldName + "	" + self.kind + "	" + self.type + "	" + self.level + "	" + self.onlyCode + "	" + str(
+                num))
